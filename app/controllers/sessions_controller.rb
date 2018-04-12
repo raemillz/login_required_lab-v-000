@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
   end
 
   def show
-    @name = params[:name]
+    
   end
 
 end
