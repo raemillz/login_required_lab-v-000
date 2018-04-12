@@ -5,8 +5,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    session[:name] = params[:name]
-    redirect_to 'sessions/new'
+    if
+      session[:name] = params[:name]
+      redirect_to 'sessions/show'
+    else
+      alert: "You must input a name to login."
+      redirect_to '/'
   end
 
   def destroy
