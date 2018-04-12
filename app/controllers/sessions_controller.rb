@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
     else
       flash[:alert] = "You must input a name to login."
       redirect_to '/'
+    end
   end
 
   def destroy
