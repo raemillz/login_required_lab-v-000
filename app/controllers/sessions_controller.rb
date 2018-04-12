@@ -6,10 +6,11 @@ class SessionsController < ApplicationController
 
   def create
     if !params[:name] || params[:name].empty?
-      redirect_to 'sessions/show'
-    else
       flash[:alert] = "You must input a name to login."
       redirect_to '/new'
+    else
+      sessions[:name] = params[:name]
+      redirect_to 'sessions/show'
     end
   end
 
