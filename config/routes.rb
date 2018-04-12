@@ -4,6 +4,5 @@ Rails.application.routes.draw do
   post 'logout', to: 'sessions#destroy'
   post 'create', to: 'sessions#create'
   get 'show', to: 'sessions#show'
-  post 'show', to: 'sessions#show'
   get '/secret', to: 'secrets#show'
 end
