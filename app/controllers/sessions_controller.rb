@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to 'sessions/show'
     else
       flash[:alert] = "You must input a name to login."
-      redirect_to '/'
+      redirect_to :new
     end
   end
 
