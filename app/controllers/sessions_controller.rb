@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if session[:name] = params[:name]
+    if !params[:name]
       redirect_to 'sessions/show'
     else
       flash[:alert] = "You must input a name to login."
