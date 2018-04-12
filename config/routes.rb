@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'new', to: 'sessions#new'
   post 'logout', to: 'sessions#destroy'
   post 'create', to: 'sessions#create'
-  post 'show', to: 'sessions#show'
-
+  get 'profile', to: 'users#show'
+  post 'profile', to: 'users#show'
   get '/secret', to: 'secrets#show'
 end
