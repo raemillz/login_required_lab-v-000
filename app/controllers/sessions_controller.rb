@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       session[:name] = params[:name]
       redirect_to 'sessions/show'
     else
-      alert: "You must input a name to login."
+      flash[:alert] = "You must input a name to login."
       redirect_to '/'
   end
 
